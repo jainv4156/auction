@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'onedayauction.apps.OnedayauctionConfig',
     'authentication.apps.AuthenticationConfig',
+    'auction24.apps.Auction24Config',
     
 ]
 

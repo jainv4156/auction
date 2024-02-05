@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from onedayauction.models import bidhistory,onedayitem
+from onedayauction.models import bidhistory,auctionitem
 from django.contrib.auth.models import User
 from datetime import datetime,time,date
 # Create your views here.

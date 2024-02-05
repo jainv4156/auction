@@ -10,12 +10,12 @@ class bidhistory(models.Model):
     bidtime = models.DateTimeField()
     bidder = models.CharField(max_length=100)
     
-class onedayitem(models.Model):
+class auctionitem(models.Model):
     itemid = models.IntegerField(primary_key=True)
     itemname = models.CharField(max_length=100)
     itemdiscription = models.CharField(max_length=100)
     itemstartingprice = models.IntegerField()
-    # itemimage = models.ImageField(upload_to='images/')
+    itemimage = models.ImageField(upload_to='images/')
     currentbidder = models.CharField(max_length=100,default="None")
     currentbid=models.IntegerField(default=0)
     

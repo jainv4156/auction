@@ -19,31 +19,33 @@
 </head>
 <body>
     <div class="auction24">
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"><a href=
-            
-            '{% url "index" %}'>detail page </div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
-        <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div>
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"><a href='{% url "index" %}'>detail page </div> {% endcomment %}
+            {% for i in auction24 %}
+            <div class="elements auction24">{{i.itemid.itemname}}</div>
+            {% endfor %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+    
+        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
+    </div>
 </body>
 </html>

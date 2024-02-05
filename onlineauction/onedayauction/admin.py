@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import bidhistory
-from.models import onedayitem
+from.models import auctionitem
 
 # Register your models here.
 admin.site.register(bidhistory)
-admin.site.register(onedayitem)
+admin.site.register(auctionitem)
