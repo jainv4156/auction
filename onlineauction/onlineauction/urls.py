@@ -7,5 +7,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include("onedayauction.urls")),
     path('',include("authentication.urls")),
+    path('',include("auction24.urls")),
     
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

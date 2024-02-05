@@ -11,8 +11,7 @@ class bidhistory(models.Model):
     bidder = models.CharField(max_length=100)
     
 class onedayitem(models.Model):
-    id = models.AutoField(primary_key=True)
-    itemid = models.IntegerField()
+    itemid = models.IntegerField(primary_key=True)
     itemname = models.CharField(max_length=100)
     itemdiscription = models.CharField(max_length=100)
     itemstartingprice = models.IntegerField()

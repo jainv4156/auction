@@ -4,12 +4,10 @@ from django.contrib.auth import authenticate,login,logout
 
 
 # Create your views here.
-def index(request):
-    return render(request,"authentication.html")
 def fisrstpage(request):
     user=request.user
     if user.is_authenticated:
-        return redirect("index")
+        return redirect("auction24")
     return render(request,"firstpage.html")
 def signup_user(request):
     if request.method=="POST":
@@ -23,7 +21,7 @@ def signup_user(request):
         user.save()
         user=authenticate(username=username,password=password)
         login(request,user) 
-        return redirect("index")
+        return redirect("auction24")
     else :
 
 
@@ -36,7 +34,7 @@ def login_user(request):
         
         if user is not None :
             login(request,user)
-            return redirect("index")
+            return redirect("auction24")
         else:
             return render(request,"signup_userdetailform.html")
     else:
