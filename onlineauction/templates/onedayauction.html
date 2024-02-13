@@ -46,7 +46,7 @@
     <div>
         <div class="itemimages" id=itemimages>
             <h1>{{itemhistories.itemname}}</h1>
-            <img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200">
+            <img src='{{image.url}}' alt="{{image.url}}" width="200" height="200">
         </div>
         <div class="itemdescription" id=itemdescription>
             <div>
@@ -87,7 +87,7 @@
         </div>
     <div>
      <div>
-        <h1>Time Left: <h1 id ="time"></h1></h1>
+        <h1>Time Left: <h1 id ="time">{{timeleft}}</h1></h1>
      </div>   
     <div class="biding">
         <form action="" method="POST">
@@ -98,8 +98,7 @@
     </div>
             
 <script>
-    document.getElementById("bid").value = {{itemhistories.currentbid}}+1
-    ;
+    document.getElementById("bid").value = {{itemhistories.currentbid}}+1;
     function closeee() {
         document.getElementById("discription").style.visibility = "visible";
         document.getElementById("itemimages").style.visibility = "visible";
@@ -110,7 +109,7 @@
         document.getElementById("discription").style.visibility = "hidden";
         document.getElementById("itemdescription").style.visibility = "visible";
     }
-    document.getElementById("time").value = {{timeleft}};
+    
 </script>
 </body>
 </html>

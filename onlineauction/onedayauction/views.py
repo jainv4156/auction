@@ -8,7 +8,7 @@ def index(request):
     user=request.user
     if user.is_authenticated:
         bidinghistory= bidhistory.objects.all()
-        itemhistory=onedayitem.objects.all()[0]
+        itemhistory=auctionitem.objects.all()[0]
         if request.method=="POST":
             bid=request.POST.get("bid")
             user=request.user
@@ -18,6 +18,8 @@ def index(request):
             itemhistory.save()
             return redirect("index")
         else:
-            return render(request,"onedayauction.html",{'bidhistories':bidinghistory,'itemhistories':itemhistory,'timeleft':datetime.now().strftime("%H:%M:%S")})
+            images = auctionitem.objects.all()[0].itemimage
+            context={'bidhistories':bidinghistory,'itemhistories':itemhistory,'timeleft':datetime.now().strftime("%H:%M:%S"),'image':images}
+            return render(request,"onedayauction.html",context)
     else:
         return render(request,"firstpage.html")

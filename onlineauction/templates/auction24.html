@@ -19,9 +19,15 @@
 </head>
 <body>
     <div class="auction24">
-        {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"><a href='{% url "index" %}'>detail page </div> {% endcomment %}
-            {% for i in auction24 %}
-            <div class="elements auction24">{{i.itemid.itemname}}</div>
+        {% for i in auction24 %}
+
+            <div class="elements auction24element">
+                time left:{{i.itemid.itemendtime}}
+                <img src="{{i.itemid.itemimage.url }}" alt="sitar" width="200" height="200">
+                <a href="{% url 'index'  %}">detail</a>
+                basebid:{{i.itemid.itemstartingprice}}
+                currentbid:{{i.itemid.currentbid}}
+            </div>
             {% endfor %}
         {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}
         {% comment %} <div class="elements auction24element"><img src='{% static '/images/sitar.jpg' %}' alt="sitar" width="200" height="200"></div> {% endcomment %}

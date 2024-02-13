@@ -1,0 +1,19 @@
+from django.shortcuts import render,redirect
+from onedayauction.models import auctionitem
+
+# Create your views here.
+def auctionlist(request):   
+    return render(request,"auctionlist.html")
+def additem(request):   
+    if request.method == "POST":
+        itemid = request.POST.get("item_id")
+        itemname = request.POST.get("item_name")
+        itemdiscription = request.POST.get("description")
+        itemstartingprice = request.POST.get("starting_price")
+        # itemimage = request.FILES["image"]
+        # itemauctiondate = request.POST.get("auction_date")
+
+        data=auctionitem(itemid=itemid,itemname=itemname,itemdiscription=itemdiscription,itemstartingprice=itemstartingprice)
+        data.save() 
+        return redirect("index")
+    return redirect("auctionlist")

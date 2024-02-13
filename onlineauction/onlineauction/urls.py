@@ -8,5 +8,6 @@ urlpatterns = [
     path('',include("onedayauction.urls")),
     path('',include("authentication.urls")),
     path('',include("auction24.urls")),
+    path('auctionlist',include("auctionlisting.urls")),
     
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
