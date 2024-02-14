@@ -17,5 +17,6 @@ class auctionitem(models.Model):
     itemstartingprice = models.IntegerField()
     itemimage = models.ImageField(upload_to='images/',default="images/sitar.jpg")
     currentbidder = models.CharField(max_length=100,default="None")
+    status = models.CharField(max_length=100,default="NotSold")
     currentbid=models.IntegerField(default=0)
     
