@@ -2,6 +2,6 @@ from django.db import models
 
 # Create your models here.
 class auctionobjects(models.Model):
-    objectid = models.IntegerField(primary_key=True)
+    slot = models.IntegerField(primary_key=True)
     itemid   = models.ForeignKey("onedayauction.auctionitem", on_delete=models.CASCADE)
     

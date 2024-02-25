@@ -16,7 +16,8 @@
             <h3>{{objectlist.itemname}}</h3>
             <h3>{{objectlist.itemstartingprice}}</h3>
             <h3>{{objectlist.status}}</h3>
-            <a href="#">update</a>
+            <h3>{{objectlist.slots}}</h3>
+            <a href="{% url 'updateitem' objectlist.itemid %}">update</a>
             <form action="">
             <a href="{% url 'deleteitem' objectlist.itemid %}">delete</a>
 
