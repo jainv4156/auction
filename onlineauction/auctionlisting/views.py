@@ -20,8 +20,8 @@ def additem(request):
     
     return render(request,"auctionlist.html")
 def history(request):
-    auctionhistoryitem=auctionitem.objects.all().filter(status="Sold")
-    return renden(request,"itemmanager.html",{"objectlists":auctionhistory})
+    auctionhistoryitem=auctionitem.objects.all().filter(status="auctioned/sold")
+    return render(request,"itemmanager.html",{"objectlists":auctionhistoryitem})
 def deleteitem(request,p):
     data =auctionitem.objects.all().filter(itemid=p)
     data.delete()

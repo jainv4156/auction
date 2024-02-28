@@ -5,7 +5,7 @@ from django.db import models
 class bidhistory(models.Model):
     id = models.AutoField(primary_key=True)
     itemid = models.IntegerField()
-    itemname = models.CharField(max_length=100)
+    # itemname = models.CharField(max_length=100)
     bid = models.IntegerField()
     bidtime = models.DateTimeField()
     bidder = models.CharField(max_length=100)

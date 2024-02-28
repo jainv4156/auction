@@ -12,6 +12,7 @@ def add(x, y):
 def time_update():
     if auctionitem.objects.all().filter(status="NotSold").count()==0:
         return "done"
+        
     auctioning_item=auctionitem.objects.all().filter(status="auctioning")
     for i in auctioning_item:
         i.slots+=1

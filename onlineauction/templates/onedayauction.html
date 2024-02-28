@@ -46,7 +46,8 @@
     <div>
         <div class="itemimages" id=itemimages>
             <h1>{{itemhistories.itemname}}</h1>
-            <img src='{{image.url}}' alt="{{image.url}}" width="200" height="200">
+            <h1>{{itemhistories.itemid}}</h1>
+            <img src="{{ itemhistories.itemimage.url }}" alt="{{itemhistories.itemimage}}" width="200" height="200">
         </div>
         <div class="itemdescription" id=itemdescription>
             <div>
@@ -66,10 +67,11 @@
     <div class ="bidhistory">
         <p>Starting Price: {{itemhistories.itemstartingprice}}</p>
         {% for bidhistory in bidhistories %}
-            <p>{{bidhistory.id}}</p>
+            {% comment %} <p>{{bidhistory.id}}</p> {% endcomment %}
             <p>Bid: {{bidhistory.bid}}</p>
             <p>time: {{bidhistory.bidtime.time}}</p>
             <p>Bidder: {{bidhistory.bidder}}</p>
+            <br>
         {% endfor %}
         {% if itemhistories.currentbid == 0 %}
         

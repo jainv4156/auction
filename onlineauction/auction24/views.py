@@ -5,8 +5,7 @@ from  auction24.task import add,time_update
 def auction24(request):
     auction24item = auctionobjects.objects.all()
     context={'auction24':auction24item}
-    result = time_update.delay()
-    print(result)
+    # result = time_update.delay()
     return render(request,"auction24.html",context)
 
 
