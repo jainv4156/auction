@@ -5,9 +5,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include("onedayauction.urls")),
-    path('',include("authentication.urls")),
-    path('',include("auction24.urls")),
-    path('auctionlist',include("auctionlisting.urls")),
+    path('api/',include("apis.urls")),
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

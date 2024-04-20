@@ -28,24 +28,29 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CSRF_TRUSTED_ORIGINS = [
+    "http://127.0.0.1:3000"]
 
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'onedayauction.apps.OnedayauctionConfig',
-    'authentication.apps.AuthenticationConfig',
-    'auction24.apps.Auction24Config',
-    'django_celery_results',    
+    'django_celery_results',   
+    'rest_framework',
+    'apis'
     
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -125,21 +130,21 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
-MEDIA_URl ='/media/' 
 MEDIA_ROOT =os.path.join(BASE_DIR, 'media') 
+MEDIA_URL ='/media/' 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Celery settings
-CELERY_TIMEZONE = 'Asia/Kolkata'
-CELERY_BROKER_URL = 'redis://localhost:6379/0'  
-CELERY_RESULT_BACKEND = 'django-db'
-# CELERY_BEAT_SCHEDULE = {
-#     'every-1-hour': {
-#         'task': 'auction24.task.add',
-#         'schedule': 10,
-#         'args': (16,10),
-#     }
-# }
+# CELERY_TIMEZONE = 'Asia/Kolkata'
+# CELERY_BROKER_URL = 'redis://localhost:6379/0'  
+# CELERY_RESULT_BACKEND = 'django-db'
+# # CELERY_BEAT_SCHEDULE = {
+# #     'every-1-hour': {
+# #         'task': 'auction24.task.add',
+# #         'schedule': 10,
+# #         'args': (16,10),
+# #     }
+# # }
